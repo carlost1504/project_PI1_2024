@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      :root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.bottom-bar {
+  position: relative;
+  width: 1440px;
+  height: 64px;
+  margin: 960px 0 0 0;
+  background: #ffffff;
+}
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid #ffffff;
+  z-index: 12;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+}
+.email {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29.69%;
+  top: 32.81%;
+  left: 54.95%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 10;
+}
+.phone {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29.69%;
+  top: 32.81%;
+  left: 36.41%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 8;
+}
+.university {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29.69%;
+  top: 32.81%;
+  left: 6.53%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.vector {
+  position: absolute;
+  width: 1.39%;
+  height: 31.25%;
+  top: 32.81%;
+  left: 93.4%;
+  background: url(./assets/images/55e0d59e-a519-464d-a7b2-f6f035aa8aa0.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 11;
+}
+.vector-1 {
+  position: absolute;
+  width: 1.46%;
+  height: 26.7%;
+  top: 34.31%;
+  left: 52.59%;
+  background: url(./assets/images/48185c38-7515-4d50-8a5f-84f96487ee66.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 9;
+}
+.vector-2 {
+  position: absolute;
+  width: 1.16%;
+  height: 27.28%;
+  top: 34.38%;
+  left: 30.63%;
+  background: url(./assets/images/65409bb6-80c8-4394-bc7c-adaa3a4d6be7.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 6;
+}
+.vector-3 {
+  position: absolute;
+  width: 1.16%;
+  height: 26.68%;
+  top: 34.38%;
+  left: 26.74%;
+  background: url(./assets/images/cf711e75-0b65-43cb-af15-39c4c3a20ff0.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 4;
+}
+.vector-4 {
+  position: absolute;
+  width: 0.99%;
+  height: 28.71%;
+  top: 34.38%;
+  left: 34.7%;
+  background: url(./assets/images/00e66d44-405d-4e27-a98d-fc07b51e5141.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 7;
+}
+.vector-5 {
+  position: absolute;
+  width: 1.09%;
+  height: 24.61%;
+  top: 35.94%;
+  left: 28.68%;
+  background: url(./assets/images/ca66e5ac-e4b9-4bc2-8557-d50f59acb598.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 5;
+}
+.vector-6 {
+  position: absolute;
+  width: 0.98%;
+  height: 22.14%;
+  top: 37.5%;
+  left: 5.1%;
+  background: url(./assets/images/4c1d90ed-df9d-420f-88da-f6056249657a.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.vector-7 {
+  position: absolute;
+  width: 1.16%;
+  height: 19.14%;
+  top: 39.06%;
+  left: 24.86%;
+  background: url(./assets/images/3179004c-d51d-42ea-8863-6b7d958d2453.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 3;
+}
+.image {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  height: 93.75%;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/7007038e-c110-4640-8911-6188976505de.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 13;
+}
+.iniciar-sesion {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 8%;
+  top: 20.21%;
+  left: 65.83%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 28;
+}
+.nombre-de-usuario {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.95%;
+  top: 31.84%;
+  left: 61.04%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 27;
+}
+.vector-8 {
+  position: absolute;
+  width: 32.5%;
+  height: 5.32%;
+  top: 34.9%;
+  left: 61.04%;
+  background: url(./assets/images/4e35067d-b239-4b77-81d4-6210bbbb4d01.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 24;
+}
+.user-name-input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 44.06%;
+  top: 30.55%;
+  left: 1.71%;
+  color: #8d8d8d;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 26;
+}
+.vector-9 {
+  position: absolute;
+  width: 2.99%;
+  height: 29.3%;
+  top: 35.32%;
+  left: 91.67%;
+  background: url(./assets/images/53e563a6-9f81-4771-ba55-7a0d9e3c0d15.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 25;
+}
+.password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.95%;
+  top: 43.75%;
+  left: 60.97%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 22;
+}
+.vector-a {
+  position: absolute;
+  width: 32.5%;
+  height: 5.32%;
+  top: 46.81%;
+  left: 61.04%;
+  background: url(./assets/images/186e1770-5e23-4243-a535-032ab338872e.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 19;
+}
+.password-input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 44.06%;
+  top: 30.55%;
+  left: 1.71%;
+  color: #8d8d8d;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 21;
+}
+.vector-b {
+  position: absolute;
+  width: 3.42%;
+  height: 33.42%;
+  top: 33.29%;
+  left: 91.45%;
+  background: url(./assets/images/847b8d7f-606e-4a14-8f12-c7a25f84a354.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 20;
+}
+.vector-c {
+  position: absolute;
+  width: 32.5%;
+  height: 5.32%;
+  top: 55.62%;
+  left: 61.01%;
+  background: url(./assets/images/ab7d9650-afd8-41b4-9f47-51d106362f19.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 16;
+}
+.acceder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 50.13%;
+  top: 28.07%;
+  left: 42.74%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 17;
+}
+.forgot-password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 2.25%;
+  top: 64.45%;
+  left: 67.29%;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 14;
+}
+</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generated by Codia AI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="bottom-bar">
+        <div class="rectangle">
+          <span class="email">Icesivirtual.ti@listas.icesi.edu.co</span
+          ><span class="phone">Teléfono: 5552334 ext 4188</span
+          ><span class="university">Universidad Icesi</span>
+          <div class="vector"></div>
+          <div class="vector-1"></div>
+          <div class="vector-2"></div>
+          <div class="vector-3"></div>
+          <div class="vector-4"></div>
+          <div class="vector-5"></div>
+          <div class="vector-6"></div>
+          <div class="vector-7"></div>
+        </div>
+      </div>
+      
+      <div class="image">
+        <a href="https://ibb.co/6YmnLs5"><img src="https://i.ibb.co/0qcDvJ3/MG-2898.jpg" alt="MG-2898" border="0"></a>
+      </div>
+
+
+      <form action="/signin/" method="post"">
+        
+      <span class="iniciar-sesion">Iniciar sesión</span
+      ><span class="nombre-de-usuario">Nombre de usuario</span>
+      <div class="vector-8">
+        <span class="user-name-input">{% csrf_token %}{{ form.username }}</span>
+        <div class="vector-9"></div>
+      </div>
+      <span class="password">Contraseña</span>
+      <div class="vector-a">
+        <span class="password-input">{% csrf_token %}{{ form.password }}</span>
+        <div class="vector-b"></div>
+      </div>
+    
+      <div class="vector-c"><button type="submit">Login</button></div>
+      <span class="forgot-password"
+        >¿Olvidó su nombre de usuario o contraseña?</span>
+    </form>
+    </div>
+    
+   
+  </body>
+</html>
